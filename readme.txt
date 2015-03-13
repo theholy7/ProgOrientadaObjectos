@@ -7,3 +7,11 @@ One folder per Laboratory Assignment
 One folder for the Project
 
 All folders are self-contained.
+
+
+To run from terminal:
+Go to src and class directory and “javac JavaClass.java”
+Go to bin and “java packagename.JavaClass”
+
+To run Jar files:
+“java -jar jarfile.jar”
