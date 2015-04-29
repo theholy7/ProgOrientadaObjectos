@@ -1,0 +1,44 @@
+package genericCList;
+
+public class CircularLinkedList<T> {
+	
+	CLLNode<T> head = null;
+	private int count = 0;
+	
+	public CircularLinkedList(CLLNode<T> head) {
+		super();
+		this.head = head;
+	}
+	
+	public void add(CLLNode<T> node){
+		if(count == 0){
+			this.head = node;
+			++this.count;
+		}
+		else{
+			CLLNode<T> current = this.head;
+			while(current.next != this.head){
+				current = current.next;
+			}
+			current.next = node;
+			node.next = this.head;
+		}	
+	}
+	
+	public void remove(CLLNode<T> node){
+		
+		CLLNode<T> current = this.head;
+		CLLNode<T> previous = null;
+		
+		while(current.next != this.head){
+			previous = current;
+			
+			if(node.equals(current)){
+				previous.next = current.next;
+				
+			}
+			current = current.next;
+		}
+	}
+	
+}

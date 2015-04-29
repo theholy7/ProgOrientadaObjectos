@@ -1,0 +1,15 @@
+package genericCList;
+
+public class CLLNode<T> {
+	
+	T elemnent;
+	CLLNode<T> next = null;
+	
+	
+	public CLLNode(T elemnent, CLLNode<T> next) {
+		super();
+		this.elemnent = elemnent;
+		this.next = next;
+	}
+
+}
