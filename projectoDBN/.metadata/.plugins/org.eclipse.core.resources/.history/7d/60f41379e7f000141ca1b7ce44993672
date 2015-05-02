@@ -1,0 +1,5 @@
+package bayesianNetworks;
+
+class Node {
+
+}
