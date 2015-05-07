@@ -1,0 +1,32 @@
+package mainApp;
+
+import java.io.*;
+
+public class BayesNetworkApp {
+
+	public static void main(String[] args) {
+		
+		//GET USER INPUT FROM COMMAND LINE
+		//TRAIN, TEST, SCORE, RANDTEST, VAR
+		if(args.length != 5){
+			System.out.println("Wrong number of args. Input: Train, Test, Score, RandTest, Var");
+			System.exit(1);
+		}
+		
+		//CHECK VALIDITY OF INPUT
+		
+		//READ FILE
+		CSVReader reader = new CSVReader(new FileReader("yourfile.csv"));
+	    String [] nextLine;
+	    while ((nextLine = reader.readNext()) != null) {
+	    	// nextLine[] is an array of values from the line
+	    	System.out.println(nextLine[0] + nextLine[1] + "etc...");
+	    }
+		//PASS FILE TO BN
+		
+		//RANDOMIZE NETWORK - CHECK SCORE
+		
+		
+	}
+
+}
