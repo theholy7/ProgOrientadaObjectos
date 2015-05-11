@@ -8,7 +8,6 @@ public class BayesNetworkApp {
 	
 	public static void main(String[] args) {
 		
-		System.out.println("Working Directory = " + System.getProperty("user.dir"));
 		//GET USER INPUT FROM COMMAND LINE
 		//TRAIN, TEST, SCORE, RANDTEST, VAR
 //		if(args.length != 5){
@@ -21,34 +20,14 @@ public class BayesNetworkApp {
 		//READ FILE
 		String fileName = "train-data.csv";
 		
-		try {
-			String readFile = readFile(fileName);
-			//System.out.println(readFile);
-			
-			String[] linesOfFile = readFile.split("\n");
-			
-			String[][] collumnsOfLine = new String[linesOfFile.length][];
-			
-			for(int i=0; i<linesOfFile.length; i++){
-			 collumnsOfLine[i] = linesOfFile[i].split(",");
-			}
-			
-			System.out.println(collumnsOfLine[0][1]);
-			
-			
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		
+		String readFile = readFile(fileName);
 		//PASS FILE TO BN
 		
 		//RANDOMIZE NETWORK - CHECK SCORE
 		
 	}
 	
-	static String readFile(String fileName) throws IOException {
+	String readFile(String fileName) throws IOException {
 	    BufferedReader br = new BufferedReader(new FileReader(fileName));
 	    try {
 	        StringBuilder sb = new StringBuilder();

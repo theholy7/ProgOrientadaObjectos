@@ -23,19 +23,8 @@ public class BayesNetworkApp {
 		
 		try {
 			String readFile = readFile(fileName);
-			//System.out.println(readFile);
 			
-			String[] linesOfFile = readFile.split("\n");
-			
-			String[][] collumnsOfLine = new String[linesOfFile.length][];
-			
-			for(int i=0; i<linesOfFile.length; i++){
-			 collumnsOfLine[i] = linesOfFile[i].split(",");
-			}
-			
-			System.out.println(collumnsOfLine[0][1]);
-			
-			
+			System.out.println(readFile);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

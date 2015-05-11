@@ -33,7 +33,7 @@ public class BayesNetworkApp {
 			 collumnsOfLine[i] = linesOfFile[i].split(",");
 			}
 			
-			System.out.println(collumnsOfLine[0][1]);
+			System.out.println(collumnsOfLine[0]);
 			
 			
 		} catch (IOException e) {
