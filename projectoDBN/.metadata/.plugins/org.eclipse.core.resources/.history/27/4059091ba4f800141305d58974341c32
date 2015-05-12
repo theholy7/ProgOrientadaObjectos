@@ -1,0 +1,5 @@
+package genericCList;
+
+public class NumericCircularLinkedList {
+
+}

@@ -1,0 +1,21 @@
+package bayesianNetworks;
+
+//import
+import java.util.LinkedList;
+
+class Node {
+	
+	public Node() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	//Node attributes
+	LinkedList<Node> parentNode = null;
+	LinkedList<Node> childNode = null;
+	
+	//Data attributes
+	int r;
+	int[] data;
+
+}

@@ -1,0 +1,16 @@
+package bayesianNetworks;
+
+//import
+import java.util.LinkedList;
+
+class Edges {
+	
+	//Node attributes
+	LinkedList<Node> parentNode = null;
+	LinkedList<Node> childNode = null;
+	
+	public Edges(Node parent, Node child){
+		
+	}
+
+}

@@ -1,0 +1,74 @@
+package mainApp;
+
+import java.io.*;
+
+
+public class BayesNetworkApp {
+	
+	
+	public static void main(String[] args) {
+		
+		System.out.println("Working Directory = " + System.getProperty("user.dir"));
+		//GET USER INPUT FROM COMMAND LINE
+		//TRAIN, TEST, SCORE, RANDTEST, VAR
+//		if(args.length != 5){
+//			System.out.println("Wrong number of args. Input: Train, Test, Score, RandTest, Var");
+//			System.exit(1);
+//		}
+		
+		//CHECK VALIDITY OF INPUT
+		
+		//READ FILE
+		String fileName = "train-data.csv";
+		
+		try {
+			String readFile = readFile(fileName);
+			//System.out.println(readFile);
+			
+			String[] linesOfFile = readFile.split("\n");
+			
+			String[][] collumnsOfLine = new String[linesOfFile.length][];
+			
+			for(int i=0; i<linesOfFile.length; i++){
+				if(i==0){
+					collumnsOfLine[i] = linesOfFile[i].split(",");
+					System.out.println(collumnsOfLine[0].length);
+				}
+				else{
+					collumnsOfLine[i] = linesOfFile[i].split(",", collumnsOfLine[0].length);
+				}
+			}
+			
+			System.out.println(collumnsOfLine[1].length);
+			
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		//PASS FILE TO BN
+		
+		//RANDOMIZE NETWORK - CHECK SCORE
+		
+	}
+	
+	static String readFile(String fileName) throws IOException {
+	    BufferedReader br = new BufferedReader(new FileReader(fileName));
+	    try {
+	        StringBuilder sb = new StringBuilder();
+	        String line = br.readLine();
+
+	        while (line != null) {
+	            sb.append(line);
+	            sb.append("\n");
+	            line = br.readLine();
+	        }
+	        return sb.toString();
+	    } finally {
+	        br.close();
+	    }
+	}
+
+}
